@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import basicSsl from '@vitejs/plugin-basic-ssl'
+import path from 'path'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
@@ -8,5 +9,10 @@ export default defineConfig({
   build: {
     outDir: './docs'
   },
-  base: './'
+  base: './',
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 })

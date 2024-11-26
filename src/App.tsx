@@ -5,7 +5,7 @@ import WebApp from '@twa-dev/sdk'
 import { Button } from './components/ui/button'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count] = useState(0)
 
   return (
     <>

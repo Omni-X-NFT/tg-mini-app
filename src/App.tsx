@@ -1,23 +1,17 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from 'react'
 import './App.css'
-
+import { EnhancedBinaryOptionsPlatformComponent } from './components/enhanced-binary-options-platform'
+import WebApp from '@twa-dev/sdk'
 import { Button } from './components/ui/button'
 
 function App() {
+  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
       <h1>Vite + React</h1>
-      <Button variant={'destructive'}>dasasdsdasad</Button>
+      <Button variant={'destructive'} onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>Hello World</Button>
+      <EnhancedBinaryOptionsPlatformComponent/>
     </>
   )
 }
